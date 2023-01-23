@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  var countS = 25;
+  var countS = 30;
   $("#session").html(countS);
-  var countB = 5;
+  var countB = 0;
   $("#break").html(countB);
-  var pos = "pomodoro";
+  var pos = "Hey!";
   var countLama;
   var posLama;
   var count;
@@ -18,12 +18,12 @@ $(document).ready(function(){
           if (pos == "session"){
             clock.setTime(countB*60);
             clock.start();
-            pos = "break";
+            pos = "Break Time";
             $("#stats").html(pos);
           } else if (pos == "break"){
             clock.setTime(countS*60);
             clock.start();
-            pos = "session";
+            pos = "Best Of Luck";
             $("#stats").html(pos);
           }
         }        
@@ -65,7 +65,7 @@ $(document).ready(function(){
   $("#start").on("click", function(){
     if (count != countS || clock.getTime()==0){
       clock.setTime(countS*60);
-      pos="session";
+      pos="Best Of Luck";
       $("#stats").html(pos);
     } else {
       pos = posLama;
@@ -81,7 +81,7 @@ $(document).ready(function(){
   });
   $("#clear").on("click", function(){
     clock.stop();
-    pos = "pomodoro";
+    pos = "Hey!";
     $("#stats").html(pos);
     clock.setTime(0);
   });
