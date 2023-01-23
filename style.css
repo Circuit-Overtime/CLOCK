@@ -12,7 +12,26 @@ body {
   padding-top: 15px;
   padding-bottom: 25px;
 }
+.session_length_heading
+{
+  text-transform: uppercase;
+  font-weight: 700;
 
+}
+
+.break_length_heading
+{
+  text-transform: uppercase;
+  font-weight: 700;
+
+}
+.session
+
+{
+
+  font-size: 24px;
+  justify-content: center;
+}
 p {
   text-align: center;
 }
@@ -34,17 +53,44 @@ p {
   justify-content: center;
   height: 34px;
   align-items: center;
+  color: #333333;
+  font-size: 20px;
+  font-family: "calibri";
+  font-weight: 700;
+  position: relative;
+  top: 5px;
 }
 
 .counter {
   display: flex;
   justify-content: center;
 }
+#start, #stop, #clear
+{
+  text-transform: uppercase;
+  color: #ffc;
+  font-weight: 700;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+}
+
+#start:hover, #stop:hover, #clear:hover
+{
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 700;
+  background-color: #ffc;
+}
+
 
 .clock {
   margin-top: 30px;
 }
-
+.flip-clock-label
+{
+  font-weight: 700;
+}
 .container {
   width: 500px;
 }
@@ -70,7 +116,22 @@ p {
 
 #sessInc, #sessDec, #breakInc, #breakDec {
   font-weight: bold;
+  font-size: 21px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+
 }
+
+#sessInc:hover, #sessDec:hover, #breakInc:hover, #breakDec:hover {
+  font-weight: bold;
+  font-size: 21px;
+  outline: none;
+  border: none;
+  background-color: #ffc;
+  
+}
+
 
 #stats {
   background-color: #333333;
@@ -78,8 +139,13 @@ p {
   height: 70px;
   border-radius: 10px;
   color: #CCCCCC;
-  font-size: 45px;
+  font-size: 24px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+
 }
 
 #statRow {
